@@ -11,5 +11,4 @@ public class Day1{
         System.out.println("The Sum of two number is "+       (a+b));
         sc.close();
     }
-    
 }

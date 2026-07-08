@@ -1,0 +1,28 @@
+import java.util.*;
+public class Start6 {
+    public static void main(String[] args) {
+
+        // Scanner sc = new Scanner(System.in);
+
+        int arr[] = {2,3,4,5,6,7,8,9};
+        Vector<Integer> even = new Vector<>();
+        Vector<Integer> odd = new Vector<>();
+
+
+        for(int i=0; i<arr.length; i++){
+            if(arr[i]%2==0){
+                even.add(arr[i]);
+            }
+            else{
+                odd.add(arr[i]);
+            }
+        }
+        // System.out.println(arr);
+        System.out.println(even);
+        System.out.println(odd);
+        
+        System.out.println(even.get(2));
+
+
+    }
+}
