@@ -1,27 +1,19 @@
-import java.util.Scanner;
-import java.util.Vector;
+
+import java.util.*;
 
 public class Start10 {
     public static void main(String[] args) {
+
+        int n=5;
         
-        Vector<Integer> arr = new Vector<>();
-        Scanner sc = new Scanner(System.in);
+        int []arr = new int[n];
 
-        arr.add(10);
-        arr.add(20);
-        arr.add(2,30);
+        arr[1] = 10;
+        arr[2] = 20;
 
-        arr.remove(1);
+        System.out.println(Arrays.toString(arr));
 
-        arr.add(1,100);
 
-        for(int i=0; i<5; i++){
-            arr.add(sc.nextInt());
-        }
-
-        System.out.println(arr);
-
-        sc.close();
 
     }
 }
