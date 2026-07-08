@@ -4,7 +4,7 @@ public class HashMap1{
         
         HashMap<Character, Integer> mp = new HashMap<>();
 
-        String str = "abcdeacdeabcder";
+        String str = "llabcdeacdeabcder";
 
         for(int i=0; i<str.length(); i++){
             Character ch = str.charAt(i);
