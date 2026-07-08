@@ -1,3 +1,4 @@
+package Intro;
 import java.util.Scanner;
 
 public class Day1{

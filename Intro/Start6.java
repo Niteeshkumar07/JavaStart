@@ -1,3 +1,4 @@
+package Intro;
 import java.util.*;
 public class Start6 {
     public static void main(String[] args) {

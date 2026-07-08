@@ -1,3 +1,4 @@
+package Intro;
 public class Start5 { 
     // Added 'static' and changed 'return 0' to proper boolean logic
     public static boolean IsPrime(int n) { 
