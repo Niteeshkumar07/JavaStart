@@ -1,0 +1,176 @@
+Method 1: Public Variables (Basic)
+class Numbers {
+    public int a = 10;
+    public int b = 20;
+}
+
+class Add extends Numbers {
+    void sum() {
+        System.out.println("Sum = " + (a + b));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Add obj = new Add();
+        obj.sum();
+    }
+}
+
+
+Method 2: Private Variables + Getters
+class Numbers {
+    private int a = 10;
+    private int b = 20;
+
+    public int getA() {
+        return a;
+    }
+
+    public int getB() {
+        return b;
+    }
+}
+
+class Add extends Numbers {
+
+    void sum() {
+        System.out.println(getA() + getB());
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Add obj = new Add();
+        obj.sum();
+
+    }
+}
+
+
+Method 3: Private Variables + Getters + Setters
+class Numbers {
+
+    private int a;
+    private int b;
+
+    public void setA(int a) {
+        this.a = a;
+    }
+
+    public void setB(int b) {
+        this.b = b;
+    }
+
+    public int getA() {
+        return a;
+    }
+
+    public int getB() {
+        return b;
+    }
+}
+
+class Add extends Numbers {
+
+    void sum() {
+        System.out.println(getA() + getB());
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Add obj = new Add();
+
+        obj.setA(50);
+        obj.setB(60);
+
+        obj.sum();
+    }
+}
+
+
+Method 4: Constructor in Parent
+class Numbers {
+
+    private int a;
+    private int b;
+
+    Numbers(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    public int getA() {
+        return a;
+    }
+
+    public int getB() {
+        return b;
+    }
+}
+
+class Add extends Numbers {
+
+    Add(int a, int b) {
+        super(a, b);
+    }
+
+    void sum() {
+        System.out.println(getA() + getB());
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Add obj = new Add(10,20);
+
+        obj.sum();
+
+    }
+}
+
+class Numbers{
+
+    protected int a,b;
+
+    Numbers(int a,int b){
+        this.a=a;
+        this.b=b;
+    }
+
+    void display(){
+        System.out.println("Parent");
+    }
+
+}
+
+class Add extends Numbers{
+
+    Add(int a,int b){
+        super(a,b);
+    }
+
+    @Override
+    void display(){
+        System.out.println(a+b);
+    }
+
+}
+
+public class Main{
+
+    public static void main(String[] args){
+
+        Numbers obj = new Add(50,100);
+
+        obj.display();
+
+    }
+
+}
